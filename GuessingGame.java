@@ -75,10 +75,10 @@ public class GuessingGame {
     // Method to report overall results to the user
     public static void reportResults(int totalGames, int totalGuesses, int bestGame) {
         System.out.println("\nOverall results:");
-        System.out.println("    Total games   = " + totalGames);
-        System.out.println("    Total guesses = " + totalGuesses);
-        System.out.printf("    Guesses/game  = %.1f\n", (double) totalGuesses / totalGames);
-        System.out.println("    Best game     = " + bestGame + " guesses");
+        System.out.println("\ttotal games \t= " + totalGames);
+        System.out.println("\ttotal guesses \t= " + totalGuesses);
+        System.out.printf("\ttuesses/game \t= %.1f\n", (double) totalGuesses / totalGames);
+        System.out.println("\tbest game \t= " + bestGame);
     }
 
     // Method to validate integer input
