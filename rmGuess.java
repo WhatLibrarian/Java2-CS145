@@ -70,11 +70,11 @@ public class rmGuess {
    public static void statistics(int totalGames, int totalGuesses, int avgCount) // have to accept those integers as parameters.
    {
       double averageCount = (double) totalGuesses / totalGames; // creates a double for the average number of guesses
-      System.out.println("~~~~ Game Statistics ~~~~");
-      System.out.println("Total Number of Games: " + totalGames);
-      System.out.println("Total Guesses: " + totalGuesses);
-      System.out.printf("Average Number of Guesses per Game: %.1f%n", averageCount);
-      System.out.println("Best Guess in a Single Game: " + avgCount);
+      System.out.println("Overall results:");
+      System.out.println("\ttotal games\t= " + totalGames);
+      System.out.println("\ttotal guesses\t= " + totalGuesses);
+      System.out.printf("\tguesses/game\t= %.1f%n", averageCount);
+      System.out.println("\tbest game\t= " + avgCount);
    } // end of statistics Method
 
    public static int singleGame(int int_random, int count, Scanner userGuess, int upperbound) {
