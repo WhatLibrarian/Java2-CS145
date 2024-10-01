@@ -5,9 +5,9 @@ public class GuessingGame {
 
     // Constants
     public static final int MAX_NUMBER = 100;  // Maximum number for guessing
-    public static final String BOLD = "\033[1m";
-    public static final String UNDERLINE = "\033[4m";
-    public static final String RESET = "\033[0m";
+    public static final String BOLD = "\033[1m"; //Making text bold
+    public static final String UNDERLINE = "\033[4m"; //Making text underline
+    public static final String RESET = "\033[0m"; //Resets formatting 
     public static void main(String[] args) {
        
         Scanner console = new Scanner(System.in);
@@ -84,9 +84,9 @@ public class GuessingGame {
     // Method to validate integer input
     public static int getValidIntInput(Scanner console, String prompt) {
         System.out.print(prompt);
-        System.out.print(BOLD + UNDERLINE);
+        System.out.print(BOLD + UNDERLINE); //Do font changes
         while (!console.hasNextInt()) {
-            System.out.print(RESET);
+            System.out.print(RESET); //Resets font changes
             System.out.print(prompt);
             System.out.println("\nInvalid input. Please enter an integer.");
             console.next();  // Clear the invalid input 
