@@ -5,11 +5,14 @@ public class GuessingGame {
 
     // Constants
     public static final int MAX_NUMBER = 100;  // Maximum number for guessing
-
+    public static final String BOLD = "\033[1m"; //Making text bold
+    public static final String UNDERLINE = "\033[4m"; //Making text underline
+    public static final String RESET = "\033[0m"; //Resets formatting 
     public static void main(String[] args) {
+       
         Scanner console = new Scanner(System.in);
         introduction();  // Game introduction
-
+        
         int totalGames = 0;
         int totalGuesses = 0;
         int bestGame = Integer.MAX_VALUE;
@@ -81,22 +84,32 @@ public class GuessingGame {
     // Method to validate integer input
     public static int getValidIntInput(Scanner console, String prompt) {
         System.out.print(prompt);
+        System.out.print(BOLD + UNDERLINE); //Do font changes
         while (!console.hasNextInt()) {
-            System.out.println("Invalid input. Please enter an integer.");
-            console.next();  // Clear the invalid input
+            System.out.print(RESET); //Resets font changes
             System.out.print(prompt);
-        }
+            System.out.println("\nInvalid input. Please enter an integer.");
+            console.next();  // Clear the invalid input 
+            System.out.print(prompt);
+            System.out.print(BOLD + UNDERLINE);
+        }    
+        System.out.print(RESET);
         return console.nextInt();
+
     }
 
     // Method to validate "yes" or "no" response
     public static String getValidYesNoResponse(Scanner console, String prompt) {
         System.out.print(prompt);
+        System.out.print(BOLD + UNDERLINE);
         String response = console.next().toLowerCase();
+        System.out.print(RESET);
         while (!response.startsWith("y") && !response.startsWith("n")) {
             System.out.println("Invalid input. Please enter 'yes' or 'no'.");
             System.out.print(prompt);
+            System.out.print(BOLD + UNDERLINE);
             response = console.next().toLowerCase();
+            System.out.print(RESET);
         }
         return response;
     }
