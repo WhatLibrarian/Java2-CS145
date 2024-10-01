@@ -41,11 +41,7 @@ public class rmGuess {
          // System.out.println("The first character is: " +firstChar); //checking
          // firsChar in dev mode
          String finalString = String.valueOf(firstChar); // turns it back into a string
-         newGame = finalString.equalsIgnoreCase("Y"); // starts a new game for y or Y.
-         // newGame = firstChar.equ38alsIgnoreCase("Y"); // this won't work because it
-         // 'deferences' the char
-         // newGame = convertCharToBoolean(firstChar); ChatGPT suggested this but no...
-         // cannot find symbol
+         newGame = finalString.equalsIgnoreCase("Y"); 
          System.out.println();
 
       } // end of newGame loop
