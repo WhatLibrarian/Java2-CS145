@@ -1,3 +1,11 @@
+/* Tymofiy Grebrnyuk, Roe McKernan, Dylan Torres
+10/1/2024
+CS& 145
+Lab 1: Guessing Game
+
+This program allows a player to participate in a number guessing game, 
+where they attempt to guess a randomly chosen number. */
+
 import java.util.Random;
 import java.util.Scanner;
 
